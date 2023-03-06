@@ -1,0 +1,24 @@
+--[[
+
+Metadata
+    Metadata is the table passed into the registry containing all sorts of info for the block.
+
+    Protected Values (used by the game, optional values)
+        - func_place (Type function)
+            - This is a function that is run when the block is initially placed in the world.
+        - func_interact (Type function)
+            - This is a function that is run when the player presses the interact key on the block
+        - func_think (Type function)
+            - This is a function that runs every frame if on the client and every tick if on the server
+        - func_destroy (Type function)
+            - This is a function that runs when the block is about to be removed from the world (in the same tick as destruction, but before deletion).
+        - directional (Type string)
+            - This determines if the block rotates to face the player when placed
+            -Valid Values:
+                - "none" or nil = The block stays in a fixed orientation (north-facing) when placed. If 'directional' is not defined, this is the default.
+                                  This should be used if your func_place determines a custom directional placement not supported here.
+                - "horizontal"  = The block rotates to face the player when placed, but only horizontally (will not rotate on pitch).
+                - "vertical"    = The block rotates to face the player when placed, but only vertically (will not rotate on yaw).
+                - "all"         = The block will rotate to face the player in both pitch and yaw.
+        
+]]
